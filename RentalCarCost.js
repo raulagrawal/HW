@@ -1,9 +1,13 @@
-function rentalCarCost(d) {
-  if (d >= 3 && d < 7) {
-                return (d * 40) - 20;
-            } else if (d >= 7) {
-                return (d * 40) - 50;
-            } else {
-                return d * 40;
-            }
+function rentalCarCost(numberOfDays) {
+    var finalAmount = 0,
+        actualAmount = numberOfDays * 40;
+
+    if (numberOfDays >= 3 && numberOfDays < 7) {
+        finalAmount = actualAmount - 20;
+    } else if (numberOfDays >= 7) {
+        finalAmount = actualAmount - 50;
+    } else {
+        finalAmount = actualAmount;
+    }
+    return finalAmount;
 }
